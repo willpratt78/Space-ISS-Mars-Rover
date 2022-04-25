@@ -2,21 +2,39 @@
 <html lang="en-US">
 <head>
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <form id="object-location">
-      <label for="address">Address line:</label>
-      <input type="text" id="address" name="addressLine"><br><br>
-       <!-- zip -->
-       <!-- address -->
-      <label for="zip">Address line:</label>
-      <input type="text" id="zip" name="ziine"><br><br>
-
-    </form>
+  <div id="container">
+      <div class="form-object">
+        <form id="object-location">
+          <label for="address">Address:</label>
+          <input type="text"  style="color:rgb(27, 95, 158); background-color:black" id="address-input" name="addressLine"><br><br>
+          <label for="zip">Zip code:</label>
+          <input type="text" style="color:rgb(27, 95, 158); background-color:black" id="Pc-input" name="zipLine"><br><br>
+          <button type= "submit" id="run-bing">Find the ISS!</button>
+        </form>
+        <div id="output"></div>
+        <div id="output-between"></div>
+      </div>
+      <div id="map-image">
+        
+      </div>
+      <ul id="landmark-output"></ul>
+      <iframe
+      id="google-maps-iframe"
+      width="600"
+      height="450"
+      style="border: 0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src=""
+    >
+    </iframe>
+    </div> 
   </div>
-
-  <!-- ISS HTML -->
-  <button id="run-iss">Run</button>
 </body>
 </html>

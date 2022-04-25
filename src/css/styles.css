@@ -1,0 +1,38 @@
+body{
+  background-color:grey;
+  background-size: cover;
+  background-repeat: none;
+  color: rgb(27, 95, 158);
+  font-size: x-large;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  text-align: center; */
+  width: 90%;
+  margin: auto;
+}
+
+/* #wonders {
+  float: right;
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  border-style:ridge;
+  display: cover;
+  border-color: rgb(15, 10, 66);
+  box-shadow: 0 20px 40px rgba(4, 0, 0, 0.19), 0 12px 12px rgba(72, 10, 10, 0.23);
+} */
+
+div .form-object {
+  
+}
