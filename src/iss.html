@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+</head>
+<body id="iss-body">
+  <div class="container">
+    <div class="navbar">
+      <img src="../assets/images/spacelogo.png" alt="">
+      <a href="index.html">Home</a>
+      <a href="iss.html">ISS</a>
+      <a href="rover.html">Mars Rover</a>
+    </div>
+      <h1>HOW FAR AWAY IS THE ISS?</h1>
+      <div class="form-object">
+        <form id="object-location">
+          <label for="address">Address:</label>
+          <input type="text"  style="color:rgb(27, 95, 158); background-color:black" id="address-input" name="addressLine"><br><br>
+          <label for="zip">Zip code:</label>
+          <input type="text" style="color:rgb(27, 95, 158); background-color:black" id="Pc-input" name="zipLine"><br><br>
+          <button type= "submit" id="run-bing">Find the ISS!</button>
+        </form>
+        <div id="output"></div>
+      </br>
+        <ul id="output-people"></ul>
+      </div>
+      <div id="map-image">
+        
+      </div>
+      <ul id="landmark-output"></ul>
+      <iframe
+      id="google-maps-iframe"
+      width="600"
+      height="450"
+      style="border: 0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src=""
+    >
+    </iframe>
+    <div>
+      <div id="iss-interact" class="invisable">
+      <img id="iss-img" src="../assets/images/ISS2.png" alt="" />
+      <span id="iss1" class="iss-label">Solar Panels</span>
+      <span id="iss2" class="iss-label">Labatories</span>
+    </div>
+      <div class="wrapper">
+        <div class="moving-iss">
+          <img id = "iss" src="../assets/images/ISS.png">
+        </div>
+        <div class="moving-img">
+          
+        </div>
+      </div>
+      <h3 class="info-iss">The International Space Station (ISS) is a multi-nation construction project that is the largest single structure humans ever put into space. Its main construction was completed between 1998 and 2011, although the station continually evolves to include new missions and experiments. It has been continuously occupied since Nov. 2, 2000.
+
+        The ISS is not owned by one single nation and is a “co-operative programme” between Europe, the United States, Russia, Canada and Japan, according to the European Space Agency (ESA). 
+      </h3>
+    </div> 
+    
+  </div>
+</body>
+</html>
+
+
+<!-- <button type= "submit" style="color:rgb(156, 204, 204); background-color:black"  id="run-bing">Find the ISS!</button> -->

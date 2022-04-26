@@ -7,27 +7,43 @@ import $ from 'jquery';
 import { Distance } from './js/utility.js';
 // import { Nasa } from './js/nasa.js'
 import {PeopleInSpace} from "./js/people.js";
+import {RoverPhotos} from "./js/rover-photos.js";
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 390 && $(window).scrollTop() < 560) {
+    $("#iss-interact").removeClass("invisable");
+    $("#iss-img").addClass("animate");
+    $(".iss-label").addClass("animate-slower");
+  }
+});
 
 function displayLandmarks(landmarksArray) {
   const output = $("#landmark-output");
   $("#landmark-output").text("");
   for (let i = 0; i < landmarksArray.length; i++) {
-    $(output).append(`<li> ${landmarksArray[i][1]} is: ${landmarksArray[i][0]}km away from the ISS!</li>`);
+    $(output).append(`<li> ${landmarksArray[i][1]} is: ${landmarksArray[i][0]} km away from the ISS!</li>`);
   }
 }
 
 async function displayPeople() {
   const peopleArray = await PeopleInSpace.getPeopleSpace();
-  console.log(peopleArray)
+  console.log(peopleArray);
   const output = $("#output-people");
   $("#output-people").text("");
   for (let i = 0; i < peopleArray.length; i++) {
     if(peopleArray[i].craft !== "ISS"){
       return "";
     }else
-    $(output).append(`<li> Right now ${peopleArray[i].name} is on the ${peopleArray[i].craft} !</li>`);
+      $(output).append(`<li> Right now ${peopleArray[i].name} is on the ${peopleArray[i].craft} !</li>`);
   }
 }
+
+// function displayRoverPhotos() {
+//   const output = $("#photo-block");
+//   $("#photo-block").text("");
+//   for (let i = 0; i < landmarksArray.length; i++) {
+//     $(output).append();
+//   }
 
 
 // function updateGoogleMaps(lat, long){
@@ -54,5 +70,27 @@ $("#object-location").submit(async function(event) {
   $("#output").text("you are " + displayDistance + " kilometers away from the ISS!");
 });
 
-
-
+$("#birthday").submit(async function(event) {
+  event.preventDefault();
+  const photoBlock = $("#photo-block");
+  const date = $("#date-input").val();
+  const imgUrl = getRoverPhotos.response.photos[index].img_src;
+  let today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); 
+  var yyyy = today.getFullYear();
+  today = yyyy + "-" + mm + "-" + dd;
+  if (date > today) {
+    $("#error-message").text(
+      "The date you entered is invalid. Please enter a new date"
+    );
+  } else {
+    $("#error-message").text("");
+    const month = date.slice(5);
+    const newDate = `2021-${month}`;
+    $("#output3").text("");
+    let photo = RoverPhotos.getRoverPhotos(newDate);
+    console.log(photo);
+    $(photoBlock).append(`<img src='${imgUrl}'>`);
+  }
+});

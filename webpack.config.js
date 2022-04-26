@@ -4,7 +4,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index : './src/index.js'
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -16,10 +18,23 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), 
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      // title: 'Shape Tracker',
+      filename: 'index.html',
       template: './src/index.html',
-      inject: 'body'
+      inject: true,
+      chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+    filename: 'iss.html',
+    template: './src/iss.html',
+    inject: true,
+    chunks: ['index']
+  }),new HtmlWebpackPlugin({
+    filename: 'rover.html',
+    template: './src/rover.html',
+    inject: true,
+    chunks: ['index']
+  }),
     new Dotenv()
   ],
   module: {
@@ -35,7 +50,26 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
-      }
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+     
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
+      },
     ]
   }
 };
