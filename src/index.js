@@ -72,9 +72,9 @@ $("#object-location").submit(async function(event) {
 
 $("#birthday").submit(async function(event) {
   event.preventDefault();
-  const photoBlock = $("#photo-block");
+  // const photoBlock = $("#photo-block");
   const date = $("#date-input").val();
-  const imgUrl = getRoverPhotos.response.photos[index].img_src;
+  // const imgUrl = getRoverPhotos.response.photos[index].img_src;
   let today = new Date();
   var dd = String(today.getDate()).padStart(2, "0");
   var mm = String(today.getMonth() + 1).padStart(2, "0"); 
@@ -91,6 +91,6 @@ $("#birthday").submit(async function(event) {
     $("#output3").text("");
     let photo = RoverPhotos.getRoverPhotos(newDate);
     console.log(photo);
-    $(photoBlock).append(`<img src='${imgUrl}'>`);
+    // $(photoBlock).append(`<img src='${imgUrl}'>`);
   }
 });
