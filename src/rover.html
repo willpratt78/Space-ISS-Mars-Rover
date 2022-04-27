@@ -7,26 +7,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 </head>
 <body id="rover-body">
-  <div>
+  <div class="container">
     <div class="navbar">
       <img src="../assets/images/spacelogo.png" alt="">
       <a href="index.html">Home</a>
       <a href="iss.html">ISS</a>
       <a href="rover.html">Mars Rover</a>
     </div>
-      <h1>MARS PHOTOS FROM YOUR BIRTHDAY</h1>
-      <div class="form-object2">
-        <form id="birthday">
+    <div class="form-object2">
+      <form id="birthday">
+          <h1 id="mars-page-title">MARS PHOTOS FROM YOUR BIRTHDAY</h1>
         <label for="birthday">Enter your birthday</label>
         <input type="date" id="date-input" placeholder="put it here" required />
-        <button type="submit" class="btn btn-info">Space B-Day</button>
+        <button type="submit" class="space-bday">Space B-Day</button>
         </form>
-        <div id="output3"></div>
+        <div id="rover-error-output"></div>
+       
       </div>  
       <div id="mars-photos" class="hidden">
         <h1>On your birthday last year</h1>
-        <h1>the mars rover took these photos!</h1>
-        <div id="photo-block"></div>
+        <h1>NASA’s Perseverance Rover rover took this photo!</h1>
+        <div id="output3"></div>
+        <div id="error-message"></div>
       </div>
     <div class="wrapper">
       <div class="moving-rover">

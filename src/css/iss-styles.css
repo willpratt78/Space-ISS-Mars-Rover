@@ -1,0 +1,188 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#iss {
+  width: 650px;
+  display: none;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+.info-iss {
+  text-align: justify;
+  text-justify: inter-word;
+  width: 80%;
+  border: 5px solid rgb(0, 0, 0);
+  padding: 100px;
+  margin: auto;
+  margin-top: 20px;
+  background-image: url("https://a.thumbs.redditmedia.com/Viwu-zOMDlD_GZOsO-OpNIKeFQa406KtExOdft5vqN8.png");
+  background-size: cover;
+}
+#iss-body {
+  background-image: url("../../assets/images/starbackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#run-bing {
+  transition-duration: 0.4s;
+  padding: 12px 28px;
+  font-size: 15px;
+  background-color: rgb(189, 217, 246);
+  color: #236dae;
+}
+#run-bing:hover {
+  background-color: #236dae;
+  color: rgb(189, 217, 246);
+  box-shadow: 0 12px 16px 0 rgba(156, 251, 251, 0.24),
+    0 17px 50px 0 rgba(176, 244, 248, 0.19);
+}
+#output-people {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  background-color: black;
+}
+#people-title {
+  background-color: black;
+}
+#iss-img {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+#iss-interact {
+  position: relative;
+  width: 900px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#iss1 {
+  position: absolute;
+  right: 30px;
+  top: 200px;
+}
+#iss2 {
+  position: absolute;
+  left: 320px;
+  bottom: 80px;
+}
+#object-location {
+  background-image: url("https://a.thumbs.redditmedia.com/Viwu-zOMDlD_GZOsO-OpNIKeFQa406KtExOdft5vqN8.png");
+  width: 70%;
+  margin: auto;
+  padding-bottom: 20px;
+  box-shadow: 20px 20px 40px 5px rgba(244, 240, 225, 0.19);
+}
+#object-location h1 {
+  margin-bottom: 40px;
+  padding: 5px;
+}
+#landmark-output {
+  position: relative;
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  background-color: black;
+  border: 3px solid white;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+#landmark-output img {
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 220px;
+  max-height: 220px;
+  border: 2px solid white;
+}
+#landmark-output p {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+#landmark-output button {
+  position: absolute;
+  bottom: 30px;
+  right: 150px;
+  border: 5px solid transparent;
+  padding: 5px;
+  font-size: 20px;
+}
+#landmark-output button:hover {
+  border: 5px solid white;
+  cursor: pointer;
+}
+#output p {
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+  border: 2px solid white;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+#iss-see-title {
+  margin-top: 70px;
+}
+.animate {
+  animation-name: lookAt, zoomIn;
+  animation-duration: 2s;
+  animation-direction: forward;
+}
+.animate-slower {
+  animation-name: lookAt-slow;
+  animation-duration: 3s;
+  animation-direction: forward;
+}
+@keyframes lookAt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lookAt-slow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.3, 0.3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* .moving-iss {
+  position: relative;
+  top: 10px; 
+  width: 100px;
+  z-index: 10;
+  left: 18%;
+  animation: moveiss 30s ease-in-out forwards;
+}
+
+@keyframes moveiss {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 110%;
+  }
+} */

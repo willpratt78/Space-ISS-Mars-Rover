@@ -1,0 +1,45 @@
+#home-background {
+  background-image: url("../../assets/images/galaxy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.img-information {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
+
+#image-description {
+  font-size: 27px;
+  color: white;
+  font-style: italic;
+}
+
+#copyright-author {
+  font-size: 20px;
+  color: white;
+  font-style: italic;
+}
+
+.moving-iss {
+  position: relative;
+  top: -10px;
+  width: 100px;
+  z-index: 10;
+  left: 18%;
+  animation: moveiss 30s ease-in-out forwards;
+}
+@keyframes moveiss {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+#iss-png {
+  width: 450px;
+}
