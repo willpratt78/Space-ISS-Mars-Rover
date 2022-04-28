@@ -169,20 +169,3 @@ ul {
     transform: scale(1, 1);
   }
 }
-/* .moving-iss {
-  position: relative;
-  top: 10px; 
-  width: 100px;
-  z-index: 10;
-  left: 18%;
-  animation: moveiss 30s ease-in-out forwards;
-}
-
-@keyframes moveiss {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 110%;
-  }
-} */
