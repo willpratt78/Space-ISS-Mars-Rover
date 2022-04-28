@@ -35,7 +35,7 @@ git clone https://github.com/willpratt78/Space-ISS-Mars-Rover
 - CD into cloned project.
 
 ```
-cd Space-Tracker
+cd Space-ISS-Mars-Rover
 ```
 
 - Create a .env file that has the following API Keys:
@@ -44,11 +44,12 @@ cd Space-Tracker
 touch .env
 ```
 
-- Go to [Bing maps API key](https://www.bingmapsportal.com/?_gl=1*87qaxg*_gcl_aw*R0NMLjE2NTEwODIwMzQuQ2owS0NRancwNk9UQmhDX0FSSXNBQVUxeU9VRVlzSlh0ZklBbzRVckJmdTBiNEM3V2NxR0h4VlNhNlVPTXcwZW5mWWxRWUJYYzN1UWFjOGFBdGQzRUFMd193Y0I.) and follow thir instructions to get an API key, then in the .env file create API_KEY_BING=[API KEY]
+- Go to [Bing maps API key](https://www.bingmapsportal.com/?_gl=1*87qaxg*_gcl_aw*R0NMLjE2NTEwODIwMzQuQ2owS0NRancwNk9UQmhDX0FSSXNBQVUxeU9VRVlzSlh0ZklBbzRVckJmdTBiNEM3V2NxR0h4VlNhNlVPTXcwZW5mWWxRWUJYYzN1UWFjOGFBdGQzRUFMd193Y0I.) and follow their instructions to get an API key, then in the .env file create API_KEY_BING=[API KEY]
 - Go to [NASA API KEY](https://api.nasa.gov/), scroll to Generate API Key, and fill out the form, then in the .env file create API_KEY_NASA=[API KEY]
 - Go to [Google Maps Embed API KEY](https://developers.google.com/maps/documentation/embed/map-generator#api-key), follow their instructions to generate an API key then in the .env file create API_KEY_GOOGLE=[API KEY]
 
 ```
+*In .env file*
 API_KEY_NASA=YOUR_KEY_HERE
 API_KEY_BING=YOUR_KEY_HERE
 API_KEY_GOOGLE=YOUR_KEY_HERE
